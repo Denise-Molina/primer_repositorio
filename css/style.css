@@ -20,7 +20,8 @@ body {
     margin-right: 0;
     margin-left: 0;
     background-color: #fdffd1;
-    background-image: url(../img/fondo\ 2.jpg);
+   /* background-image: url(../img/fondo\ 2.jpg); */
+    background-image: linear-gradient(#f3e8e8,#e9b1af );
     background-size: 100%;
     font-family: RobotoSlab-thin;
     font-weight: bold;
