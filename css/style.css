@@ -13,6 +13,20 @@
     src: url(../fonts/static/RobotoSlab-Regular.ttf);
 }
 
+.subtitulo {
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.mini-descripciones {
+    justify-content: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+
 /*general*/
 
 body {
@@ -21,7 +35,7 @@ body {
     margin-left: 0;
     background-color: #fdffd1;
     /* background-image: url(../img/fondo\ 2.jpg); */
-    background-image: linear-gradient(#f3e8e8, #e9b1af);
+    background-image: linear-gradient(#f3e8e8, #FFE0F0, #DDC3D0);
     background-size: 100%;
     font-family: RobotoSlab-thin;
     font-weight: bold;
