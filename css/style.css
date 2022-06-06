@@ -483,6 +483,12 @@ header {
 
 /*Contenedor quienes somos*/
 
+
+.contenedorQuienesSomos{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .contenedorQuienesSomos {
     display: grid;
     grid-template-columns: auto;
@@ -500,11 +506,11 @@ header {
     grid-area: Nos;
 }
 
-/*
+
 .contenidoNosotros {
     grid-area: contenidoNosotros;
 }
-*/
+
 
 .intro {
     grid-area: intro;
