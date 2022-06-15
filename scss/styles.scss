@@ -14,6 +14,8 @@
 }
 
 @import 'variables';
+@import 'mapas';
+@import 'mixins';
 
 .subtitulo {
     font-weight: bold;
@@ -23,8 +25,8 @@
 
 .mini-descripciones {
     justify-content: justify;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: map-get($medidas, small);
+    margin-right: map-get($medidas, small);
     align-items: center;
 }
 
@@ -32,7 +34,7 @@
 /*general*/
 
 .titulo {
-    color: $color-texto;
+    color: white;
     font-style: normal;
     margin-left: 0px;
     font-size: 40px;
@@ -66,8 +68,7 @@ body {
         border-color: $color-secundario;
 
         .logo {
-            height: 100px;
-            width: 100px;
+            @include sizes (100px, 100px);
             margin-left: 35px;
             padding: 5px;
             border: 5px;
@@ -77,7 +78,6 @@ body {
             align-items: center;
             justify-content: center;
         }
-
     }
 }
 
@@ -87,7 +87,7 @@ body {
 
 /* .menu{
 display:flex;
-padding: 2opx;
+padding: 20px;
 text decoration: none;
 margin-right: inherit;
 } */
@@ -98,7 +98,7 @@ ul.menu li {
     display: inline-flex;
     padding-right: 40px;
     /* justify-content: space-between; */
-    font-size: 20px;
+    font-size: map-get($medidas, small);
     color: $color-texto;
     text-decoration: none;
     align-items: center;
@@ -114,21 +114,22 @@ ul.menu li {
 }
 
 h3 {
-    margin-left: 35px;
+    margin-left: 0px;
     text-align: center;
     font-size: 25px;
     font-family: $tipografia-textos;
 }
 
+
 footer {
     background-color: $color-principal;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 20px;
+    padding-bottom: map-get($medidas, small);
 
     .footer {
         color: $color-texto;
-        margin-left: 0px;
+        margin-left: map-get($medidas, nothing);
         text-align: center;
         font-size: 20px;
         justify-content: center;
@@ -137,7 +138,7 @@ footer {
             color: $color-texto;
             text-decoration: none;
             text-align: center;
-            font-size: 20px;
+            font-size: map-get($medidas, small);
             justify-content: center;
             margin: 0px;
         }
@@ -153,55 +154,51 @@ footer {
 /*Index*/
 
 .parrafos-index {
-    margin-left: 100px;
-    margin-right: 100px;
-    font-size: 20px;
+    margin-left: map-get($medidas, big);
+    margin-right: map-get($medidas, big);
+    font-size: map-get($medidas, small);
     align-items: center;
     text-align: center;
 
     #parrafosIndex {
         text-align: center;
-        margin: 20px;
+        margin: map-get($medidas, small);
         padding: 10px;
     }
 }
 
 #parrafosIndex {
     text-align: justify;
-    margin: 20px;
-    padding: 10px;
+    @include mp (20px, 10px);
 }
 
 .titulos-index {
-    margin-left: 25px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     font-family: $tipografia-textos;
 
     .mision {
-        margin-top: 20px;
+        margin-top: map-get($medidas, small);
     }
 }
 
 .footerIndex {
-    margin: 0;
+    @include mp (0px, 0px);
     border: 0;
-    padding: 0;
 }
 
 
 /*Ubicacion*/
 .mapa {
-    padding: 5px;
+    @include mp (5px, 5px);
     border: 5px;
-    margin: 5px;
     font-size: 50%;
     justify-content: center;
 
     #mapaUbicacion {
-        width: 360px;
-        height: 260px;
+        @include sizes (400px, 300px);
+
     }
 }
 
@@ -209,11 +206,11 @@ footer {
 /*texto*/
 
 p {
-    font-size: 20px;
+    font-size: map-get($medidas, small);
 }
 
 li {
-    font-size: 20px;
+    font-size: map-get($medidas, small);
 }
 
 h1 {
@@ -230,14 +227,14 @@ h2 {
 /*Servicios*/
 
 .servicios {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: map-get($medidas, medium);
+    margin-top: map-get($medidas, small);
     justify-content: center;
     font-size: 30px;
 }
 
 .derecho-de {
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 .items {
@@ -256,17 +253,17 @@ h2 {
 
 /*Quienes somos*/
 .quienes-somos {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: map-get($medidas, medium);
+    margin-top: map-get($medidas, small);
 }
 
 
 .nombres {
-    margin-left: 30px;
+    margin-left: map-get($medidas, medium);
 }
 
 .descripcion {
-    margin-left: 30px;
+    margin-left:map-get($medidas, medium) ;
     justify-content: center;
 }
 
@@ -276,24 +273,18 @@ header {
 }
 
 .imagen1 {
-    height: 350px;
-    width: 200px;
-    margin: 15px;
-    padding: 20px;
+    @include sizes (200px, 350px);
+    @include mp (15px, 20px);
 }
 
 .imagen2 {
-    height: 350px;
-    width: 200px;
-    margin: 15px;
-    padding: 20px;
+    @include sizes (200px, 350px);
+    @include mp (15px, 20px);
 }
 
 .imagen3 {
-    height: 350px;
-    width: 200px;
-    margin: 15px;
-    padding: 20px
+    @include sizes (200px, 350px);
+    @include mp (15px, 20px);
 }
 
 /*Contacto*/
@@ -310,12 +301,11 @@ header {
         display: inline-block;
         justify-content: center;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: map-get($medidas, small);
 
         .contacto {
-            padding: 5px;
+            @include mp (10px, 5px);
             border: 5px;
-            margin: 10px;
             justify-content: center;
             text-align: center;
         }
@@ -323,8 +313,7 @@ header {
 }
 
 .seccion {
-    padding: 0;
-    margin: 0;
+    @include mp (0px, 0px);
     background-color: #AEA3B0;
     justify-content: center;
 
@@ -364,17 +353,7 @@ label {
 }
 
 .headerIndex {
-    background-color: $color-principal;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 8px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-style: solid;
-    border-color: $color-secundario;
-
+    @extend header;
 }
 
 header {
@@ -418,16 +397,7 @@ header {
 
 
 .headerUbicacion {
-    background-color: $color-principal;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 8px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-style: solid;
-    border-color: $color-secundario
+    @extend header;
 }
 
 header {
@@ -456,16 +426,7 @@ header {
 }
 
 .headerContacto {
-    background-color: $color-principal;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 8px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-style: solid;
-    border-color: $color-secundario;
+    @extend header;
 }
 
 
@@ -497,16 +458,8 @@ header {
 }
 
 .headerNosotros {
-    background-color: $color-principal;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 8px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-style: solid;
-    border-color: $color-secundario
+    @extend header;
+
 }
 
 .Nos {
@@ -561,16 +514,7 @@ header {
 }
 
 .headerServicios {
-    background-color: $color-principal;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 8px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-style: solid;
-    border-color: $color-secundario;
+    @extend header;
 }
 
 .headerServicios {
@@ -698,10 +642,14 @@ header {
             color: $color-texto;
             font-style: normal;
             margin-left: 0px;
-            font-size: 50px;
+            font-size: 60px;
             text-align: center;
             font-family: $tipografia-titulos;
             font-weight: bold;
+        }
+
+        #logo {
+            @include sizes (110px, 110px);
         }
 
     }
@@ -711,14 +659,12 @@ header {
     }
 
     .mapa {
-        padding: 5px;
+        @include mp (5px, 5px);
         border: 5px;
-        margin: 5px;
         justify-content: space-between;
 
         #mapaUbicacion {
-            width: 500px;
-            height: 360px;
+            @include sizes (700px, 500px)
         }
 
     }
@@ -731,15 +677,14 @@ header {
 
         #parrafosIndex {
             text-align: justify;
-            margin: 20px;
-            padding: 10px;
+            @include mp(20px, 10px);
         }
 
     }
 
     .carousel-item {
-        margin-right: 30px;
-        margin-left: 30px;
+        margin-right: map-get($medidas, medium);
+        margin-left: map-get($medidas, medium);
         padding: 15px;
         width: 500px;
         align-items: center;
@@ -813,24 +758,19 @@ header {
 }
 */
     .imagen1 {
-        height: 500px;
-        width: 300px;
-        margin: 15px;
-        padding: 20px;
+        @include sizes (300px, 500px);
+        @include mp (15px, 20px);
     }
 
     .imagen2 {
-        height: 500px;
-        width: 300px;
-        margin: 15px;
-        padding: 20px;
+        @include sizes (300px, 500px);
+        @include mp (15px, 20px);
+
     }
 
     .imagen3 {
-        height: 500px;
-        width: 300px;
-        margin: 15px;
-        padding: 20px
+        @include sizes (300px, 500px);
+        @include mp (15px, 20px);
     }
 
 
@@ -846,32 +786,38 @@ header {
         border-style: solid;
         border-color: $color-secundario;
 
+
+
+
         .logo {
-            height: 100px;
-            width: 100px;
-            margin-left: 20px;
-            margin-right: 30px;
+            @include sizes (150px, 150px);
+            margin-left: map-get($medidas, small);
+            margin-right:map-get($medidas, medium); ;
             padding: 5px;
             border: 5px;
             align-items: center;
             justify-content: space-between;
         }
+
+        #logo {
+            @include sizes (130px, 130px);
+
+        }
+
         .titulo {
             margin-right: 25px;
-            font-size: 55px;
-    
+            font-size: 70px;
+
         }
 
     }
 
     .mapa {
-        padding: 15px;
+        @include mp (5px, 15px);
         border: 15px;
-        margin: 5px;
 
         #mapaUbicacion {
-            width: 550px;
-            height: 390px;
+            @include sizes (800px, 640px)
         }
     }
 
@@ -879,44 +825,41 @@ header {
         margin-left: 100px;
         margin-right: 100px;
         text-align: center;
-        font-size: 20px;
+        font-size: map-get($medidas, small);
 
         #parrafosIndex {
             text-align: justify;
-            margin: 20px;
-            padding: 10px;
+            @include mp (20px, 10px);
+        }
+
+        .headerIndex {
+            display: inline-flex;
+        }
+
+        .headerUbicacion {
+            display: inline-flex;
+        }
+
+        .headerNosotros {
+            display: inline-flex;
+        }
+
+        .headerServicios {
+            display: inline-flex;
+
+        }
+
+        .headerContacto {
+            display: inline-flex;
+        }
+
+        .carousel-item {
+            margin-right: map-get($medidas, medium);
+            margin-left:map-get($medidas, medium);
+            padding: 15px;
+            width: 700px;
+            align-items: center;
         }
     }
-
-    .headerIndex {
-        display: inline-flex;
-    }
-
-    .headerUbicacion {
-        display: inline-flex;
-    }
-
-    .headerNosotros {
-        display: inline-flex;
-    }
-
-    .headerServicios {
-        display: inline-flex;
-
-    }
-
-    .headerContacto {
-        display: inline-flex;
-    }
-
-    .carousel-item {
-        margin-right: 30px;
-        margin-left: 30px;
-        padding: 15px;
-        width: 700px;
-        align-items: center;
-    }
-
-
 
 }

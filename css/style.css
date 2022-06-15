@@ -11,6 +11,13 @@
   font-family: RobotoSlab-regular;
   src: url(../fonts/static/RobotoSlab-Regular.ttf); }
 
+/*Colores*/
+/*Gradientes*/
+/*Tipografias*/
+/*mapa de color
+$colores: (color-principal:#320A28, color-secundario:#b9aeb6, color-texto:white, color-detalle: black);
+*/
+/*mapa de medidas*/
 .subtitulo {
   font-weight: bold;
   text-decoration: underline; }
@@ -41,7 +48,7 @@ body {
   background-size: 100%;
   font-family: RobotoSlab-thin;
   font-weight: bold; }
-  body header {
+  body header, body .headerIndex, body .headerUbicacion, body .headerContacto, body .headerNosotros, body .headerServicios {
     background-color: #320A28;
     display: inline;
     justify-content: center;
@@ -52,7 +59,7 @@ body {
     border-left: 0;
     border-style: solid;
     border-color: #b9aeb6; }
-    body header .logo {
+    body header .logo, body .headerIndex .logo, body .headerUbicacion .logo, body .headerContacto .logo, body .headerNosotros .logo, body .headerServicios .logo {
       height: 100px;
       width: 100px;
       margin-left: 35px;
@@ -69,7 +76,7 @@ body {
 
 /* .menu{
 display:flex;
-padding: 2opx;
+padding: 20px;
 text decoration: none;
 margin-right: inherit;
 } */
@@ -90,7 +97,7 @@ ul.menu li {
   color: white; }
 
 h3 {
-  margin-left: 35px;
+  margin-left: 0px;
   text-align: center;
   font-size: 25px;
   font-family: RobotoSlab-regular; }
@@ -137,7 +144,6 @@ footer {
   padding: 10px; }
 
 .titulos-index {
-  margin-left: 25px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -146,20 +152,20 @@ footer {
     margin-top: 20px; }
 
 .footerIndex {
-  margin: 0;
-  border: 0;
-  padding: 0; }
+  margin: 0px;
+  padding: 0px;
+  border: 0; }
 
 /*Ubicacion*/
 .mapa {
+  margin: 5px;
   padding: 5px;
   border: 5px;
-  margin: 5px;
   font-size: 50%;
   justify-content: center; }
   .mapa #mapaUbicacion {
-    width: 360px;
-    height: 260px; }
+    height: 300px;
+    width: 400px; }
 
 /*texto*/
 p {
@@ -185,7 +191,7 @@ h2 {
   font-size: 30px; }
 
 .derecho-de {
-  margin-left: 30px; }
+  margin-left: 0px; }
 
 .items {
   margin-left: 30px; }
@@ -209,7 +215,7 @@ h2 {
   margin-left: 30px;
   justify-content: center; }
 
-header {
+header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
   border-bottom: 8px;
   border-color: #b9aeb6; }
 
@@ -244,15 +250,15 @@ header {
     text-align: center;
     margin-bottom: 20px; }
     .formulario form .contacto {
+      margin: 10px;
       padding: 5px;
       border: 5px;
-      margin: 10px;
       justify-content: center;
       text-align: center; }
 
 .seccion {
-  padding: 0;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   background-color: #AEA3B0;
   justify-content: center; }
   .seccion .botón {
@@ -276,19 +282,7 @@ label {
   gap: 0;
   grid-template-areas: "header header header" "mision mision mision" "vision vision vision" "valores valores valores" "lena lena lena" "footerIndex footerIndex footerIndex"; }
 
-.headerIndex {
-  background-color: #320A28;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 8px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #b9aeb6; }
-
-header {
+header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
   grid-area: header; }
 
 .mision {
@@ -315,19 +309,7 @@ header {
   gap: 0;
   grid-template-areas: "header" "mapa" "footerUbicacion"; }
 
-.headerUbicacion {
-  background-color: #320A28;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 8px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #b9aeb6; }
-
-header {
+header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
   grid-area: header; }
 
 .mapa {
@@ -345,18 +327,6 @@ header {
   grid-template-areas: "headerContacto headerContacto headerContacto" "formulario formulario formulario" "footerContacto footerContacto footerContacto"; }
 
 .headerContacto {
-  background-color: #320A28;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 8px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #b9aeb6; }
-
-.headerContacto {
   grid-area: headerContacto; }
 
 .formulario {
@@ -372,18 +342,6 @@ header {
   grid-template-rows: 0, 25fr 1fr 1fr 1fr 1fr 0, 25fr;
   gap: 0;
   grid-template-areas: "Nos " "contenidoNosotros " "primerContenido" "segundoContenido" "tercerContenido" "footerNosotros "; }
-
-.headerNosotros {
-  background-color: #320A28;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 8px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #b9aeb6; }
 
 .Nos {
   grid-area: Nos; }
@@ -413,18 +371,6 @@ header {
   grid-template-rows: 0, 25fr 0, 25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0, 25fr;
   gap: 0;
   grid-template-areas: "headerServicios " "serviciosTitulo " " familia  " "familiaimg " "laboral " "laboralimg " "civilycomer " "civilycomerimg  " " Sucesorio " "sucesorioimg  " "footerServicios "; }
-
-.headerServicios {
-  background-color: #320A28;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 8px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #b9aeb6; }
 
 .headerServicios {
   grid-area: headerServicios; }
@@ -490,7 +436,7 @@ header {
     grid-area: sucesorioimg; }
   .footerServicios {
     grid-area: footerServicios; }
-  header {
+  header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
     background-color: #320A28;
     display: inline;
     justify-content: space-between;
@@ -501,24 +447,27 @@ header {
     border-left: 0;
     border-style: solid;
     border-color: #b9aeb6; }
-    header .titulo {
+    header .titulo, .headerIndex .titulo, .headerUbicacion .titulo, .headerContacto .titulo, .headerNosotros .titulo, .headerServicios .titulo {
       color: white;
       font-style: normal;
       margin-left: 0px;
-      font-size: 50px;
+      font-size: 60px;
       text-align: center;
       font-family: RobotoSlab-extrabold;
       font-weight: bold; }
+    header #logo, .headerIndex #logo, .headerUbicacion #logo, .headerContacto #logo, .headerNosotros #logo, .headerServicios #logo {
+      height: 110px;
+      width: 110px; }
   .menuUbicacion {
     display: flex; }
   .mapa {
+    margin: 5px;
     padding: 5px;
     border: 5px;
-    margin: 5px;
     justify-content: space-between; }
     .mapa #mapaUbicacion {
-      width: 500px;
-      height: 360px; }
+      height: 500px;
+      width: 700px; }
   .parrafos-index {
     margin-left: 100px;
     margin-right: 100px;
@@ -600,7 +549,7 @@ header {
     width: 300px;
     margin: 15px;
     padding: 20px; }
-  header {
+  header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
     background-color: #320A28;
     display: inline-flex;
     justify-content: space-between;
@@ -611,25 +560,28 @@ header {
     border-left: 0;
     border-style: solid;
     border-color: #b9aeb6; }
-    header .logo {
-      height: 100px;
-      width: 100px;
+    header .logo, .headerIndex .logo, .headerUbicacion .logo, .headerContacto .logo, .headerNosotros .logo, .headerServicios .logo {
+      height: 150px;
+      width: 150px;
       margin-left: 20px;
       margin-right: 30px;
       padding: 5px;
       border: 5px;
       align-items: center;
       justify-content: space-between; }
-    header .titulo {
+    header #logo, .headerIndex #logo, .headerUbicacion #logo, .headerContacto #logo, .headerNosotros #logo, .headerServicios #logo {
+      height: 130px;
+      width: 130px; }
+    header .titulo, .headerIndex .titulo, .headerUbicacion .titulo, .headerContacto .titulo, .headerNosotros .titulo, .headerServicios .titulo {
       margin-right: 25px;
-      font-size: 55px; }
+      font-size: 70px; }
   .mapa {
+    margin: 5px;
     padding: 15px;
-    border: 15px;
-    margin: 5px; }
+    border: 15px; }
     .mapa #mapaUbicacion {
-      width: 550px;
-      height: 390px; }
+      height: 640px;
+      width: 800px; }
   .parrafos-index {
     margin-left: 100px;
     margin-right: 100px;
@@ -639,19 +591,19 @@ header {
       text-align: justify;
       margin: 20px;
       padding: 10px; }
-  .headerIndex {
-    display: inline-flex; }
-  .headerUbicacion {
-    display: inline-flex; }
-  .headerNosotros {
-    display: inline-flex; }
-  .headerServicios {
-    display: inline-flex; }
-  .headerContacto {
-    display: inline-flex; }
-  .carousel-item {
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 15px;
-    width: 700px;
-    align-items: center; } }
+    .parrafos-index .headerIndex {
+      display: inline-flex; }
+    .parrafos-index .headerUbicacion {
+      display: inline-flex; }
+    .parrafos-index .headerNosotros {
+      display: inline-flex; }
+    .parrafos-index .headerServicios {
+      display: inline-flex; }
+    .parrafos-index .headerContacto {
+      display: inline-flex; }
+    .parrafos-index .carousel-item {
+      margin-right: 30px;
+      margin-left: 30px;
+      padding: 15px;
+      width: 700px;
+      align-items: center; } }
