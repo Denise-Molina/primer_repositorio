@@ -1024,37 +1024,8 @@ header {
             "footerContacto footerContacto footerContacto";
     }
 
-    /*
-    .contenedorQuienesSomos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.25fr  1fr 1fr 0, 25fr;
-        gap: 0;
-        grid-template-areas: "headerNosotros headerNosotros headerNosotros"
-            "contenidoNosotros contenidoNosotros contenidoNosotros"
-            "primerContenido segundoContenido tercerContenido"
-            "footerNosotros footerNosotros footerNosotros";
-    }
 
-.headerNosotros{
-    grid-area: headerNosotros;
-}
 
-.primerContenido{
-    grid-area: primerContenido;
-}
-
-.segundoContenido{
-    grid-area: segundoContenido;
-}
-
-.tercerContenido{
-    grid-area: tercerContenido;
-}
-.footerNosotros{
-    grid-area: footerNosotros;
-}
-*/
     .imagen1 {
         @include sizes (300px, 500px);
         @include mp (15px, 20px);
@@ -1378,53 +1349,3 @@ li {
     }
 }
 
-/*carrusel index*/
-/*imagenes index*/
-/*
-.indeximg1{
-    width: 700px;
-    height: 460px;
-}
-
-.indeximg2{
-    width: 700px;
-    height: 460px;
-}
-
-.indeximg3{
-    width: 700px;
-    height: 460px;
-}
-
-.indeximg4{
-    width: 700px;
-    height: 460px;
-}
-
-#contenedor{
-    width: 700px;
-    margin: 30px auto;
-    overflow: hidden;
-}
-
-#contenedor ul{
-    width: 2800px;
-    display: flex;
-
-    animation: slide 20s infinite alternate;
-}
-
-@keyframes slide{
-    0% {margin-left: 0px;}
-    20% {margin-left: 0px;}
-
-    25% {margin-left: -700px;}
-    45% {margin-left: -700px;}
-
-    50% {margin-left: -1400px;}
-    75% {margin-left: -1400px;}
-
-    75% {margin-left: -2100px;}
-    100%{margin-left: -2100px;}
-}
-*/
