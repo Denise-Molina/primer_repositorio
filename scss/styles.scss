@@ -459,6 +459,17 @@ label {
         }
     }
 
+    .mapa {
+        @include mp (5px, 5px);
+        border: 5px;
+        justify-content: center;
+    
+        #mapaUbicacion {
+            @include sizes (350px, 200px);
+    
+        }
+    }
+
 }
 
 @media screen and (min-width:480px) {
@@ -527,6 +538,16 @@ label {
 
         100% {
             margin-left: -1170px;
+        }
+    }
+    .mapa {
+        @include mp (5px, 5px);
+        border: 5px;
+        justify-content: center;
+    
+        #mapaUbicacion {
+            @include sizes (390px, 240px);
+    
         }
     }
 }
@@ -1143,53 +1164,73 @@ header {
 
     /*carrusel index*/
     /*imagenes index*/
-    
-.indeximg1{
-    width: 1000px;
-    height: 600px;
-}
 
-.indeximg2{
-    width: 1000px;
-    height: 600px;
-}
+    .indeximg1 {
+        width: 1000px;
+        height: 600px;
+    }
 
-.indeximg3{
-    width: 1000px;
-    height: 600px;
-}
+    .indeximg2 {
+        width: 1000px;
+        height: 600px;
+    }
 
-.indeximg4{
-    width: 1000px;
-    height: 600px;
-}
+    .indeximg3 {
+        width: 1000px;
+        height: 600px;
+    }
 
-#contenedor{
-    width: 1000px;
-    margin: 30px auto;
-    overflow: hidden;
-}
+    .indeximg4 {
+        width: 1000px;
+        height: 600px;
+    }
 
-#contenedor ul{
-    width: 4000px;
-    display: flex;
+    #contenedor {
+        width: 1000px;
+        margin: 30px auto;
+        overflow: hidden;
+    }
 
-    animation: slide 20s infinite alternate;
-}
+    #contenedor ul {
+        width: 4000px;
+        display: flex;
 
-@keyframes slide{
-    0% {margin-left: 0px;}
-    20% {margin-left: 0px;}
+        animation: slide 20s infinite alternate;
+    }
 
-    25% {margin-left: -1000px;}
-    45% {margin-left: -1000px;}
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
 
-    50% {margin-left: -2000px;}
-    75% {margin-left: -2000px;}
+        20% {
+            margin-left: 0px;
+        }
 
-    75% {margin-left: -3000px;}
-    100%{margin-left: -3000px;}
-}
+        25% {
+            margin-left: -1000px;
+        }
+
+        45% {
+            margin-left: -1000px;
+        }
+
+        50% {
+            margin-left: -2000px;
+        }
+
+        75% {
+            margin-left: -2000px;
+        }
+
+        75% {
+            margin-left: -3000px;
+        }
+
+        100% {
+            margin-left: -3000px;
+        }
+    }
 
 
 }
