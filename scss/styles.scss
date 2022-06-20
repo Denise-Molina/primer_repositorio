@@ -48,10 +48,10 @@ body {
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
-    background-color: #fdffd1;
-    /* background-image: url(../img/fondo\ 2.jpg); */
-    background-image: $gradiente;
-    background-size: 100%;
+    background-image: url(../img/fondonuevo.jpg);
+    background-size: 100vw 100vh;
+    margin: 0;
+    background-attachment: fixed;
     font-family: RobotoSlab-thin;
     font-weight: bold;
 
@@ -193,21 +193,17 @@ footer {
     text-decoration: none
 }
 
-
-
 /*Ubicacion*/
 .mapa {
     @include mp (5px, 5px);
     border: 5px;
-    font-size: 50%;
     justify-content: center;
 
     #mapaUbicacion {
-        @include sizes (400px, 300px);
+        @include sizes (400px, 260px);
 
     }
 }
-
 
 /*texto*/
 
@@ -354,7 +350,7 @@ textarea {
 form {
     width: 450px;
     margin: auto;
-    background-color:#b9aeb6 ;
+    background-color: #b9aeb6;
     padding: 10px 20px;
     box-sizing: border-box;
     margin-top: 20px;
@@ -381,9 +377,157 @@ label {
 
 }
 
-@media (max-width:480px) {
+/*media querie*/
+
+@media screen and (max-width:480px) {
     form {
         width: 100%;
+    }
+
+    h2 {
+        .soluciones {
+            justify-content: center;
+            text-decoration: underline;
+        }
+    }
+
+    .indeximg1 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg2 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg3 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg4 {
+        width: 390px;
+        height: 250px;
+    }
+
+    #contenedor {
+        width: 390px;
+        margin: 15px auto;
+        overflow: hidden;
+    }
+
+    #contenedor ul {
+        width: 1560px;
+        display: flex;
+        padding: 0px;
+
+        animation: slide 20s infinite alternate;
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
+
+        20% {
+            margin-left: 0px;
+        }
+
+        25% {
+            margin-left: -390px;
+        }
+
+        45% {
+            margin-left: -390px;
+        }
+
+        50% {
+            margin-left: -780px;
+        }
+
+        70% {
+            margin-left: -780px;
+        }
+
+        80% {
+            margin-left: -1170px;
+        }
+
+        100% {
+            margin-left: -1170px;
+        }
+    }
+
+}
+
+@media screen and (min-width:480px) {
+    .indeximg1 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg2 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg3 {
+        width: 390px;
+        height: 250px;
+    }
+
+    .indeximg4 {
+        width: 390px;
+        height: 250px;
+    }
+
+    #contenedor {
+        width: 390px;
+        margin: 15px auto;
+        overflow: hidden;
+    }
+
+    #contenedor ul {
+        width: 1560px;
+        display: flex;
+        padding: 0px;
+
+        animation: slide 20s infinite alternate;
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
+
+        20% {
+            margin-left: 0px;
+        }
+
+        25% {
+            margin-left: -390px;
+        }
+
+        45% {
+            margin-left: -390px;
+        }
+
+        50% {
+            margin-left: -780px;
+        }
+
+        70% {
+            margin-left: -780px;
+        }
+
+        80% {
+            margin-left: -1170px;
+        }
+
+        100% {
+            margin-left: -1170px;
+        }
     }
 }
 
@@ -750,6 +894,78 @@ header {
         align-items: center;
     }
 
+    /*carrusel index*/
+    /*imagenes index*/
+
+    .indeximg1 {
+        width: 700px;
+        height: 460px;
+    }
+
+    .indeximg2 {
+        width: 700px;
+        height: 460px;
+    }
+
+    .indeximg3 {
+        width: 700px;
+        height: 460px;
+    }
+
+    .indeximg4 {
+        width: 700px;
+        height: 460px;
+    }
+
+    #contenedor {
+        width: 700px;
+        margin: 30px auto;
+        overflow: hidden;
+    }
+
+    #contenedor ul {
+        width: 2800px;
+        display: flex;
+
+        animation: slide 20s infinite alternate;
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
+
+        20% {
+            margin-left: 0px;
+        }
+
+        25% {
+            margin-left: -700px;
+        }
+
+        45% {
+            margin-left: -700px;
+        }
+
+        50% {
+            margin-left: -1400px;
+        }
+
+        75% {
+            margin-left: -1400px;
+        }
+
+        75% {
+            margin-left: -2100px;
+        }
+
+        100% {
+            margin-left: -2100px;
+        }
+    }
+
+
+
 }
 
 @media screen and (min-width:1200px) {
@@ -925,6 +1141,57 @@ header {
 
     /*carrusel servicios*/
 
+    /*carrusel index*/
+    /*imagenes index*/
+    
+.indeximg1{
+    width: 1000px;
+    height: 600px;
+}
+
+.indeximg2{
+    width: 1000px;
+    height: 600px;
+}
+
+.indeximg3{
+    width: 1000px;
+    height: 600px;
+}
+
+.indeximg4{
+    width: 1000px;
+    height: 600px;
+}
+
+#contenedor{
+    width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+#contenedor ul{
+    width: 4000px;
+    display: flex;
+
+    animation: slide 20s infinite alternate;
+}
+
+@keyframes slide{
+    0% {margin-left: 0px;}
+    20% {margin-left: 0px;}
+
+    25% {margin-left: -1000px;}
+    45% {margin-left: -1000px;}
+
+    50% {margin-left: -2000px;}
+    75% {margin-left: -2000px;}
+
+    75% {margin-left: -3000px;}
+    100%{margin-left: -3000px;}
+}
+
+
 }
 
 
@@ -1009,42 +1276,113 @@ li {
     border-radius: 100%;
 }
 
+.contenedorIndex {
+    background-image: url(../img/fondonuevo.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
 
+.contenedorQuienesSomos {
+    background-image: url(../img/fondonuevo.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
 
-/*slider index*/
+.contenedorServicios {
+    background-image: url(../img/fondonuevo.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
 
-/*
-.slider{
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
+.contenedorUbicacion {
+    background-image: url(../img/fondonuevo.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
 
-ul{
-        display: inline-flex;
-        animation: cambio 20s infinite alternate linear;
-    }
-    li{
-        width: 100%;
-        list-style: none ;
-    }
-     img{
-        width: 100%;
-        height: 100%;
-    }
-    @keyframes cambio{
+#ubi {
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: $tipografia-titulos;
+    text-decoration: underline;
+}
 
-        0%{margin-left: 0;}
-        20%{margin-left: 0;}
-
-        25%{margin-left: -100%;}
-        45%{margin-left: -100%;}
-
-        50%{margin-left: -200%;}
-        70%{margin-left: -200%;}
-
-        75%{margin-left: -300%;}
-        100%{margin-left: -300%;}
-    }
+.cajablanca {
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: #320A28;
+    border: 7px;
 
 }
-   */
+
+.soluciones {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 30px;
+    margin-top: 30px;
+    text-decoration: underline;
+
+    .solu {
+        display: inline-flex;
+        justify-content: space-between;
+    }
+}
+
+/*carrusel index*/
+/*imagenes index*/
+/*
+.indeximg1{
+    width: 700px;
+    height: 460px;
+}
+
+.indeximg2{
+    width: 700px;
+    height: 460px;
+}
+
+.indeximg3{
+    width: 700px;
+    height: 460px;
+}
+
+.indeximg4{
+    width: 700px;
+    height: 460px;
+}
+
+#contenedor{
+    width: 700px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+#contenedor ul{
+    width: 2800px;
+    display: flex;
+
+    animation: slide 20s infinite alternate;
+}
+
+@keyframes slide{
+    0% {margin-left: 0px;}
+    20% {margin-left: 0px;}
+
+    25% {margin-left: -700px;}
+    45% {margin-left: -700px;}
+
+    50% {margin-left: -1400px;}
+    75% {margin-left: -1400px;}
+
+    75% {margin-left: -2100px;}
+    100%{margin-left: -2100px;}
+}
+*/
