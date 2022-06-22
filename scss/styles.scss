@@ -608,7 +608,7 @@ header {
 /*media querie*/
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:360px) {
     form {
         width: 100%;
     }
@@ -701,35 +701,35 @@ header {
 
 }
 
-@media screen and (min-width:401px) {
+@media screen and (min-width:361px) {
     .indeximg1 {
-        width: 402px;
-        height: 262px;
+        width: 380px;
+        height: 240px;
     }
 
     .indeximg2 {
-        width: 402px;
-        height: 262px;
+        width: 380px;
+        height: 240px;
     }
 
     .indeximg3 {
-        width: 402px;
-        height: 262px;
+        width: 380px;
+        height: 240px;
     }
 
     .indeximg4 {
-        width: 402px;
-        height: 262px;
+        width: 380px;
+        height: 240px;
     }
 
     #contenedor {
-        width: 402px;
+        width: 380px;
         margin: 15px auto;
         overflow: hidden;
     }
 
     #contenedor ul {
-        width: 1608px;
+        width: 1520px;
         display: flex;
         padding: 0px;
 
@@ -746,27 +746,27 @@ header {
         }
 
         25% {
-            margin-left: -402px;
+            margin-left: -380px;
         }
 
         45% {
-            margin-left: -402px;
+            margin-left: -380px;
         }
 
         50% {
-            margin-left: -804px;
+            margin-left: -760px;
         }
 
         70% {
-            margin-left: -804px;
+            margin-left: -760px;
         }
 
         80% {
-            margin-left: -1206px;
+            margin-left: -1140px;
         }
 
         100% {
-            margin-left: -1206px;
+            margin-left: -1140px;
         }
     }
 
@@ -776,7 +776,7 @@ header {
         justify-content: center;
 
         #mapaUbicacion {
-            @include sizes (350px, 200px);
+            @include sizes (370px, 220px);
 
         }
     }
