@@ -620,7 +620,22 @@ header {
         }
     }
 
-    .indeximg {
+    .indeximg1 {
+        width: 320px;
+        height: 180px;
+    }
+
+    .indeximg2 {
+        width: 320px;
+        height: 180px;
+    }
+
+    .indeximg3 {
+        width: 320px;
+        height: 180px;
+    }
+
+    .indeximg4 {
         width: 320px;
         height: 180px;
     }
@@ -691,11 +706,25 @@ header {
 
     /*carrusel*/
 
-    .indeximg {
-        @include sizes (380px, 240px);
+    .indeximg1 {
+        width: 380px;
+        height: 240px;
     }
 
+    .indeximg2 {
+        width: 380px;
+        height: 240px;
+    }
 
+    .indeximg3 {
+        width: 380px;
+        height: 240px;
+    }
+
+    .indeximg4 {
+        width: 380px;
+        height: 240px;
+    }
 
     #contenedor {
         width: 380px;
@@ -753,7 +782,7 @@ header {
         justify-content: center;
 
         #mapaUbicacion {
-            @include sizes (370px, 220px);
+            @include sizes (360px, 220px);
 
         }
     }
@@ -898,8 +927,24 @@ header {
     /*carrusel index*/
     /*imagenes index*/
 
-    .indeximg {
-        @include sizes (700px, 460px);
+    .indeximg1 {
+        width: 700px ;
+        height: 460px;
+    }
+
+    .indeximg2 {
+        width: 700px ;
+        height: 460px;
+    }
+
+    .indeximg3 {
+        width: 700px ;
+        height: 460px;
+    }
+
+    .indeximg4 {
+        width: 700px ;
+        height: 460px;
     }
 
     #contenedor {
@@ -1100,9 +1145,24 @@ header {
     /*carrusel index*/
     /*imagenes index*/
 
-    .indeximg {
-        @include sizes (1000px, 600px);
+    .indeximg1 {
+        width: 1000px;
+        height: 600px;
+    }
 
+    .indeximg2 {
+        width: 1000px;
+        height: 600px;
+    }
+
+    .indeximg3 {
+        width: 1000px;
+        height: 600px;
+    }
+
+    .indeximg4 {
+        width: 1000px;
+        height: 600px;
     }
 
 
