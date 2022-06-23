@@ -448,16 +448,7 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
   h2 .soluciones {
     justify-content: center;
     text-decoration: underline; }
-  .indeximg1 {
-    width: 320px;
-    height: 180px; }
-  .indeximg2 {
-    width: 320px;
-    height: 180px; }
-  .indeximg3 {
-    width: 320px;
-    height: 180px; }
-  .indeximg4 {
+  .indeximg {
     width: 320px;
     height: 180px; }
   #contenedor {
@@ -492,22 +483,14 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     border: 5px;
     justify-content: center; }
     .mapa #mapaUbicacion {
-      height: 150px;
-      width: 300px; } }
+      height: 140px;
+      width: 290px; } }
 
 @media screen and (min-width: 361px) {
-  .indeximg1 {
-    width: 380px;
-    height: 240px; }
-  .indeximg2 {
-    width: 380px;
-    height: 240px; }
-  .indeximg3 {
-    width: 380px;
-    height: 240px; }
-  .indeximg4 {
-    width: 380px;
-    height: 240px; }
+  /*carrusel*/
+  .indeximg {
+    height: 240px;
+    width: 380px; }
   #contenedor {
     width: 380px;
     margin: 15px auto;
@@ -534,6 +517,7 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       margin-left: -1140px; }
     100% {
       margin-left: -1140px; } }
+  /*mapa ubicación*/
   .mapa {
     margin: 5px;
     padding: 5px;
@@ -629,18 +613,9 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     align-items: center; }
   /*carrusel index*/
   /*imagenes index*/
-  .indeximg1 {
-    width: 700px;
-    height: 460px; }
-  .indeximg2 {
-    width: 700px;
-    height: 460px; }
-  .indeximg3 {
-    width: 700px;
-    height: 460px; }
-  .indeximg4 {
-    width: 700px;
-    height: 460px; }
+  .indeximg {
+    height: 460px;
+    width: 700px; }
   #contenedor {
     width: 700px;
     margin: 30px auto;
@@ -762,18 +737,9 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
   /*carrusel servicios*/
   /*carrusel index*/
   /*imagenes index*/
-  .indeximg1 {
-    width: 1000px;
-    height: 600px; }
-  .indeximg2 {
-    width: 1000px;
-    height: 600px; }
-  .indeximg3 {
-    width: 1000px;
-    height: 600px; }
-  .indeximg4 {
-    width: 1000px;
-    height: 600px; }
+  .indeximg {
+    height: 600px;
+    width: 1000px; }
   #contenedor {
     width: 1000px;
     margin: 30px auto;

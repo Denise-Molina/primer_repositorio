@@ -620,25 +620,11 @@ header {
         }
     }
 
-    .indeximg1 {
+    .indeximg {
         width: 320px;
         height: 180px;
     }
 
-    .indeximg2 {
-        width: 320px;
-        height: 180px;
-    }
-
-    .indeximg3 {
-        width: 320px;
-        height: 180px;
-    }
-
-    .indeximg4 {
-        width: 320px;
-        height: 180px;
-    }
 
     #contenedor {
         width: 320px;
@@ -694,7 +680,7 @@ header {
         justify-content: center;
 
         #mapaUbicacion {
-            @include sizes (300px, 150px);
+            @include sizes (290px, 140px);
 
         }
     }
@@ -702,25 +688,14 @@ header {
 }
 
 @media screen and (min-width:361px) {
-    .indeximg1 {
-        width: 380px;
-        height: 240px;
+
+    /*carrusel*/
+
+    .indeximg {
+        @include sizes (380px, 240px);
     }
 
-    .indeximg2 {
-        width: 380px;
-        height: 240px;
-    }
 
-    .indeximg3 {
-        width: 380px;
-        height: 240px;
-    }
-
-    .indeximg4 {
-        width: 380px;
-        height: 240px;
-    }
 
     #contenedor {
         width: 380px;
@@ -769,6 +744,8 @@ header {
             margin-left: -1140px;
         }
     }
+
+    /*mapa ubicación*/
 
     .mapa {
         @include mp (5px, 5px);
@@ -921,24 +898,8 @@ header {
     /*carrusel index*/
     /*imagenes index*/
 
-    .indeximg1 {
-        width: 700px;
-        height: 460px;
-    }
-
-    .indeximg2 {
-        width: 700px;
-        height: 460px;
-    }
-
-    .indeximg3 {
-        width: 700px;
-        height: 460px;
-    }
-
-    .indeximg4 {
-        width: 700px;
-        height: 460px;
+    .indeximg {
+        @include sizes (700px, 460px);
     }
 
     #contenedor {
@@ -1139,25 +1100,11 @@ header {
     /*carrusel index*/
     /*imagenes index*/
 
-    .indeximg1 {
-        width: 1000px;
-        height: 600px;
+    .indeximg {
+        @include sizes (1000px, 600px);
+
     }
 
-    .indeximg2 {
-        width: 1000px;
-        height: 600px;
-    }
-
-    .indeximg3 {
-        width: 1000px;
-        height: 600px;
-    }
-
-    .indeximg4 {
-        width: 1000px;
-        height: 600px;
-    }
 
     #contenedor {
         width: 1000px;
