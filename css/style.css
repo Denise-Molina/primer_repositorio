@@ -214,31 +214,15 @@ h2 {
 .nombres {
   margin-left: 30px; }
 
+/*
 .descripcion {
-  margin-left: 30px;
-  justify-content: center; }
-
+    margin-left: map-get($medidas, medium);
+    justify-content: center;
+}
+*/
 header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
   border-bottom: 8px;
   border-color: #b9aeb6; }
-
-.imagen1 {
-  height: 350px;
-  width: 200px;
-  margin: 15px;
-  padding: 20px; }
-
-.imagen2 {
-  height: 350px;
-  width: 200px;
-  margin: 15px;
-  padding: 20px; }
-
-.imagen3 {
-  height: 350px;
-  width: 200px;
-  margin: 15px;
-  padding: 20px; }
 
 /*Contacto*/
 input,
@@ -493,7 +477,39 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     justify-content: center; }
     .mapa #mapaUbicacion {
       height: 140px;
-      width: 290px; } }
+      width: 290px; }
+  /*cartillas nosotros*/
+  .primerContenido {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px; }
+    .primerContenido .box {
+      background-color: white;
+      position: relative;
+      display: inline-flex;
+      justify-content: space-between;
+      width: 300px;
+      height: 390px;
+      border-radius: 10px; }
+      .primerContenido .box .imagenpresentacion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px; }
+        .primerContenido .box .imagenpresentacion .imagen1 {
+          width: 120px;
+          height: 120px;
+          border-radius: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center; }
+      .primerContenido .box .presentacion {
+        font-size: 15px;
+        justify-content: center;
+        text-align: center;
+        margin: 5px;
+        padding: 10px; } }
 
 @media screen and (min-width: 361px) {
   /*carrusel*/
@@ -543,7 +559,38 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     justify-content: center; }
     .mapa #mapaUbicacion {
       height: 220px;
-      width: 360px; } }
+      width: 360px; }
+  /*cartillas nosotros*/
+  .primerContenido {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px; }
+    .primerContenido .box {
+      background-color: white;
+      position: relative;
+      display: inline-flex;
+      width: 300px;
+      height: 450px;
+      border-radius: 10px; }
+      .primerContenido .box .imagenpresentacion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px; }
+        .primerContenido .box .imagenpresentacion .imagen1 {
+          width: 120px;
+          height: 120px;
+          border-radius: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center; }
+      .primerContenido .box .presentacion {
+        font-size: 17px;
+        justify-content: center;
+        text-align: center;
+        margin: 5px;
+        padding: 10px; } }
 
 @media screen and (min-width: 768px) {
   .contenedorIndex {
@@ -667,7 +714,38 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     75% {
       margin-left: -2100px; }
     100% {
-      margin-left: -2100px; } } }
+      margin-left: -2100px; } }
+  /*cartillas nosotros*/
+  .primerContenido {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px; }
+    .primerContenido .box {
+      background-color: white;
+      position: relative;
+      display: inline-flex;
+      width: 370px;
+      height: 470px;
+      border-radius: 10px; }
+      .primerContenido .box .imagenpresentacion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px; }
+        .primerContenido .box .imagenpresentacion .imagen1 {
+          width: 200px;
+          height: 200px;
+          border-radius: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center; }
+      .primerContenido .box .presentacion {
+        font-size: 17px;
+        justify-content: center;
+        text-align: center;
+        margin: 5px;
+        padding: 10px; } }
 
 @media screen and (min-width: 1200px) {
   .contenedorIndex {
@@ -688,21 +766,6 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     grid-template-rows: 0, 25fr 1fr 0, 25fr;
     gap: 0;
     grid-template-areas: "headerContacto headerContacto headerContacto" "formulario formulario formulario" "footerContacto footerContacto footerContacto"; }
-  .imagen1 {
-    height: 500px;
-    width: 300px;
-    margin: 15px;
-    padding: 20px; }
-  .imagen2 {
-    height: 500px;
-    width: 300px;
-    margin: 15px;
-    padding: 20px; }
-  .imagen3 {
-    height: 500px;
-    width: 300px;
-    margin: 15px;
-    padding: 20px; }
   header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
     background-color: #320A28;
     display: inline-flex;
@@ -800,7 +863,38 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     75% {
       margin-left: -3000px; }
     100% {
-      margin-left: -3000px; } } }
+      margin-left: -3000px; } }
+  /*cartillas nosotros*/
+  .primerContenido {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px; }
+    .primerContenido .box {
+      background-color: white;
+      position: relative;
+      display: inline-flex;
+      width: 370px;
+      height: 470px;
+      border-radius: 10px; }
+      .primerContenido .box .imagenpresentacion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px; }
+        .primerContenido .box .imagenpresentacion .imagen1 {
+          width: 200px;
+          height: 200px;
+          border-radius: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center; }
+      .primerContenido .box .presentacion {
+        font-size: 17px;
+        justify-content: center;
+        text-align: center;
+        margin: 5px;
+        padding: 10px; } }
 
 /*carrusel (cambiar medidas a formato mobile)*/
 #kiko-slider {
