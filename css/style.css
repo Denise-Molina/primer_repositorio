@@ -20,13 +20,17 @@ $colores: (color-principal:#320A28, color-secundario:#b9aeb6, color-texto:white,
 /*mapa de medidas*/
 .subtitulo {
   font-weight: bold;
-  text-decoration: underline; }
+  text-decoration: underline;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
 
 .mini-descripciones {
-  justify-content: justify;
+  justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 /*general*/
 .titulo {
@@ -161,15 +165,18 @@ footer {
   text-decoration: none; }
 
 /*Ubicacion*/
+/*
 .mapa {
-  margin: 5px;
-  padding: 5px;
-  border: 5px;
-  justify-content: center; }
-  .mapa #mapaUbicacion {
-    height: 260px;
-    width: 400px; }
+    @include mp (5px, 5px);
+    border: 5px;
+    justify-content: center;
 
+    #mapaUbicacion {
+        @include sizes (400px, 260px);
+
+    }
+}
+*/
 /*texto*/
 p {
   font-size: 20px; }
@@ -210,9 +217,6 @@ h2 {
 .quienes-somos {
   margin-left: 30px;
   margin-top: 20px; }
-
-.nombres {
-  margin-left: 30px; }
 
 /*
 .descripcion {
@@ -427,11 +431,13 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
 
 /*media querie*/
 @media screen and (max-width: 360px) {
+  /*formulario*/
   form {
     width: 100%; }
   h2 .soluciones {
     justify-content: center;
     text-decoration: underline; }
+  /*index*/
   .indeximg1 {
     width: 320px;
     height: 180px; }
@@ -470,14 +476,26 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       margin-left: -960px; }
     100% {
       margin-left: -960px; } }
+  /*ubicación*/
+  #ubi {
+    margin: 10px;
+    padding: 10px;
+    font-family: RobotoSlab-extrabold;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    #ubi h2 {
+      font-size: 20px; }
   .mapa {
     margin: 5px;
     padding: 5px;
-    border: 5px;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mapa #mapaUbicacion {
-      height: 140px;
-      width: 290px; }
+      height: 120px;
+      width: 270px; }
   /*cartillas nosotros*/
   .primerContenido {
     justify-content: center;
@@ -552,11 +570,23 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     100% {
       margin-left: -1140px; } }
   /*mapa ubicación*/
+  #ubi {
+    margin: 10px;
+    padding: 10px;
+    font-family: RobotoSlab-extrabold;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    #ubi h2 {
+      font-size: 25px; }
   .mapa {
     margin: 5px;
     padding: 5px;
     border: 5px;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mapa #mapaUbicacion {
       height: 220px;
       width: 360px; }
@@ -653,11 +683,23 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       width: 110px; }
   .menuUbicacion {
     display: flex; }
+  #ubi {
+    margin: 10px;
+    padding: 10px;
+    font-family: RobotoSlab-extrabold;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    #ubi h2 {
+      font-size: 35px; }
   .mapa {
     margin: 5px;
     padding: 5px;
     border: 5px;
-    justify-content: space-between; }
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mapa #mapaUbicacion {
       height: 500px;
       width: 700px; }
@@ -795,10 +837,26 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
   .mapa {
     margin: 5px;
     padding: 15px;
-    border: 15px; }
+    border: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mapa #mapaUbicacion {
-      height: 640px;
-      width: 800px; }
+      height: 800px;
+      width: 1000px;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+  #ubi {
+    margin: 10px;
+    padding: 10px;
+    font-family: RobotoSlab-extrabold;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    #ubi h2 {
+      font-size: 50px; }
   .parrafos-index {
     margin-left: 100px;
     margin-right: 100px;
@@ -961,6 +1019,7 @@ li {
   font-size: 20px;
   border-radius: 100%; }
 
+/*imagenes de fondo*/
 .contenedorIndex {
   background-image: url(../img/fondonuevo.jpg);
   background-size: 100vw 100vh;
@@ -985,13 +1044,6 @@ li {
   background-attachment: fixed;
   margin: 0; }
 
-#ubi {
-  margin-left: 30px;
-  margin-top: 20px;
-  font-size: 50px;
-  font-family: RobotoSlab-extrabold;
-  text-decoration: underline; }
-
 .cajablanca {
   background-color: white;
   margin-top: 30px;
@@ -1010,3 +1062,9 @@ li {
   .soluciones .solu {
     display: inline-flex;
     justify-content: space-between; }
+
+/*ubicacion*/
+.horarios {
+  justify-content: center;
+  text-align: center;
+  align-items: center; }

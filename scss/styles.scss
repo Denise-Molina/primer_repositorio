@@ -20,15 +20,19 @@
 .subtitulo {
     font-weight: bold;
     text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
 
 .mini-descripciones {
-    justify-content: justify;
+    justify-content: center;
     margin-left: map-get($medidas, small);
     margin-right: map-get($medidas, small);
     align-items: center;
+    text-align: center;
 }
 
 
@@ -196,6 +200,7 @@ footer {
 }
 
 /*Ubicacion*/
+/*
 .mapa {
     @include mp (5px, 5px);
     border: 5px;
@@ -206,7 +211,7 @@ footer {
 
     }
 }
-
+*/
 /*texto*/
 
 p {
@@ -259,11 +264,6 @@ h2 {
 .quienes-somos {
     margin-left: map-get($medidas, medium);
     margin-top: map-get($medidas, small);
-}
-
-
-.nombres {
-    margin-left: map-get($medidas, medium);
 }
 
 /*
@@ -599,6 +599,8 @@ header {
 
 
 @media screen and (max-width:360px) {
+
+    /*formulario*/
     form {
         width: 100%;
     }
@@ -609,6 +611,8 @@ header {
             text-decoration: underline;
         }
     }
+
+    /*index*/
 
     .indeximg1 {
         width: 320px;
@@ -679,61 +683,78 @@ header {
         }
     }
 
+    /*ubicación*/
+
+    #ubi {
+        margin: 10px;
+        padding: 10px;
+        font-family: $tipografia-titulos;
+        text-decoration: underline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
     .mapa {
         @include mp (5px, 5px);
-        border: 5px;
         justify-content: center;
+        align-items: center;
+        text-align: center;
 
         #mapaUbicacion {
-            @include sizes (290px, 140px);
+            @include sizes (270px, 120px);
 
         }
     }
 
-/*cartillas nosotros*/
-.primerContenido {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    /*cartillas nosotros*/
+    .primerContenido {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
 
 
-    .box {
-        background-color: white;
-        position: relative;
-        display: inline-flex;
-        justify-content: space-between;
-        width: 300px;
-        height: 390px;
-        border-radius: 10px;
+        .box {
+            background-color: white;
+            position: relative;
+            display: inline-flex;
+            justify-content: space-between;
+            width: 300px;
+            height: 390px;
+            border-radius: 10px;
 
 
-        .imagenpresentacion {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-
-            .imagen1 {
-                width: 120px;
-                height: 120px;
-                border-radius: 10px;
+            .imagenpresentacion {
+                justify-content: center;
                 align-items: center;
+                text-align: center;
+                padding: 10px;
+
+                .imagen1 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            .presentacion {
+                font-size: 15px;
                 justify-content: center;
                 text-align: center;
+                margin: 5px;
+                padding: 10px;
             }
-        }
 
-        .presentacion {
-            font-size: 15px;
-            justify-content: center;
-            text-align: center;
-            margin: 5px;
-            padding: 10px;
         }
-
     }
-}
 
 }
 
@@ -811,10 +832,26 @@ header {
 
     /*mapa ubicación*/
 
+    #ubi {
+        margin: 10px;
+        padding: 10px;
+        font-family: $tipografia-titulos;
+        text-decoration: underline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-size: 25px
+        }
+    }
+
     .mapa {
         @include mp (5px, 5px);
         border: 5px;
         justify-content: center;
+        align-items: center;
+        text-align: center;
 
         #mapaUbicacion {
             @include sizes (360px, 220px);
@@ -823,49 +860,49 @@ header {
     }
 
 
-/*cartillas nosotros*/
-.primerContenido {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    /*cartillas nosotros*/
+    .primerContenido {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
 
 
-    .box {
-        background-color: white;
-        position: relative;
-        display: inline-flex;
-        width: 300px;
-        height: 450px;
-        border-radius: 10px;
+        .box {
+            background-color: white;
+            position: relative;
+            display: inline-flex;
+            width: 300px;
+            height: 450px;
+            border-radius: 10px;
 
 
-        .imagenpresentacion {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-
-            .imagen1 {
-                width: 120px;
-                height: 120px;
-                border-radius: 10px;
+            .imagenpresentacion {
+                justify-content: center;
                 align-items: center;
+                text-align: center;
+                padding: 15px;
+
+                .imagen1 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            .presentacion {
+                font-size: 17px;
                 justify-content: center;
                 text-align: center;
+                margin: 5px;
+                padding: 10px;
             }
-        }
 
-        .presentacion {
-            font-size: 17px;
-            justify-content: center;
-            text-align: center;
-            margin: 5px;
-            padding: 10px;
         }
-
     }
-}
 
 }
 
@@ -973,10 +1010,26 @@ header {
         display: flex;
     }
 
+    #ubi {
+        margin: 10px;
+        padding: 10px;
+        font-family: $tipografia-titulos;
+        text-decoration: underline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-size: 35px
+        }
+    }
+
     .mapa {
         @include mp (5px, 5px);
         border: 5px;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
         #mapaUbicacion {
             @include sizes (700px, 500px)
@@ -1075,49 +1128,49 @@ header {
         }
     }
 
-/*cartillas nosotros*/
-.primerContenido {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    /*cartillas nosotros*/
+    .primerContenido {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
 
 
-    .box {
-        background-color: white;
-        position: relative;
-        display: inline-flex;
-        width: 370px;
-        height: 470px;
-        border-radius: 10px;
+        .box {
+            background-color: white;
+            position: relative;
+            display: inline-flex;
+            width: 370px;
+            height: 470px;
+            border-radius: 10px;
 
 
-        .imagenpresentacion {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-
-            .imagen1 {
-                width: 200px;
-                height: 200px;
-                border-radius: 10px;
+            .imagenpresentacion {
+                justify-content: center;
                 align-items: center;
+                text-align: center;
+                padding: 15px;
+
+                .imagen1 {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            .presentacion {
+                font-size: 17px;
                 justify-content: center;
                 text-align: center;
+                margin: 5px;
+                padding: 10px;
             }
-        }
 
-        .presentacion {
-            font-size: 17px;
-            justify-content: center;
-            text-align: center;
-            margin: 5px;
-            padding: 10px;
         }
-
     }
-}
 
 }
 
@@ -1200,9 +1253,32 @@ header {
     .mapa {
         @include mp (5px, 15px);
         border: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
         #mapaUbicacion {
-            @include sizes (800px, 640px)
+            @include sizes (1000px, 800px);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+
+    }
+
+    #ubi {
+        margin: 10px;
+        padding: 10px;
+        font-family: $tipografia-titulos;
+        text-decoration: underline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-size: 50px;
         }
     }
 
@@ -1320,49 +1396,49 @@ header {
         }
     }
 
-/*cartillas nosotros*/
-.primerContenido {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    /*cartillas nosotros*/
+    .primerContenido {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
 
 
-    .box {
-        background-color: white;
-        position: relative;
-        display: inline-flex;
-        width: 370px;
-        height: 470px;
-        border-radius: 10px;
+        .box {
+            background-color: white;
+            position: relative;
+            display: inline-flex;
+            width: 370px;
+            height: 470px;
+            border-radius: 10px;
 
 
-        .imagenpresentacion {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-
-            .imagen1 {
-                width: 200px;
-                height: 200px;
-                border-radius: 10px;
+            .imagenpresentacion {
+                justify-content: center;
                 align-items: center;
+                text-align: center;
+                padding: 15px;
+
+                .imagen1 {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            .presentacion {
+                font-size: 17px;
                 justify-content: center;
                 text-align: center;
+                margin: 5px;
+                padding: 10px;
             }
-        }
 
-        .presentacion {
-            font-size: 17px;
-            justify-content: center;
-            text-align: center;
-            margin: 5px;
-            padding: 10px;
         }
-
     }
-}
 
 
 }
@@ -1449,6 +1525,8 @@ li {
     border-radius: 100%;
 }
 
+/*imagenes de fondo*/
+
 .contenedorIndex {
     background-image: url(../img/fondonuevo.jpg);
     background-size: 100vw 100vh;
@@ -1477,13 +1555,7 @@ li {
     margin: 0;
 }
 
-#ubi {
-    margin-left: 30px;
-    margin-top: 20px;
-    font-size: 50px;
-    font-family: $tipografia-titulos;
-    text-decoration: underline;
-}
+
 
 .cajablanca {
     background-color: white;
@@ -1509,4 +1581,9 @@ li {
     }
 }
 
-
+/*ubicacion*/
+.horarios{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
