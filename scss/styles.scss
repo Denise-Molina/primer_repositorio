@@ -49,6 +49,21 @@
     font-weight: bold;
 }
 
+.fa-brands {
+    font-size: 30px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.fa-solid {
+    font-size: 30px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
 
 body {
     margin-top: 0;
@@ -73,6 +88,8 @@ body {
         border-style: solid;
         border-color: $color-secundario;
 
+
+
         .logo {
             @include sizes (100px, 100px);
             margin-left: 35px;
@@ -83,21 +100,16 @@ body {
             margin-bottom: 5px;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
+
+
     }
 }
 
 .nav-link {
     color: $color-texto;
 }
-
-/* .menu{
-display:flex;
-padding: 20px;
-text decoration: none;
-margin-right: inherit;
-} */
-
 
 
 ul.menu li {
@@ -165,6 +177,7 @@ footer {
     font-size: map-get($medidas, small);
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     #parrafosIndex {
         text-align: center;
@@ -175,6 +188,8 @@ footer {
 
 #parrafosIndex {
     text-align: justify;
+    text-align: center;
+    justify-content: center;
     @include mp (20px, 10px);
 }
 
@@ -199,19 +214,6 @@ footer {
     text-decoration: none
 }
 
-/*Ubicacion*/
-/*
-.mapa {
-    @include mp (5px, 5px);
-    border: 5px;
-    justify-content: center;
-
-    #mapaUbicacion {
-        @include sizes (400px, 260px);
-
-    }
-}
-*/
 /*texto*/
 
 p {
@@ -226,6 +228,7 @@ h1 {
     font-size: 35px;
     font-weight: bold;
     font-family: $tipografia-textos;
+
 }
 
 h2 {
@@ -236,18 +239,27 @@ h2 {
 /*Servicios*/
 
 .servicios {
-    margin-left: map-get($medidas, medium);
     margin-top: map-get($medidas, small);
     justify-content: center;
-    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
 }
 
 .derecho-de {
-    margin-left: 0px;
+    font-size: 35px;
+    text-decoration: underline;
 }
 
-.items {
-    margin-left: 30px;
+ul {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+
+    .items {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .carousel-item {
@@ -261,23 +273,32 @@ h2 {
 
 
 /*Quienes somos*/
-.quienes-somos {
-    margin-left: map-get($medidas, medium);
+
+h2 {
     margin-top: map-get($medidas, small);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+    .quienes-somos {
+        margin-top: map-get($medidas, small);
+    }
 }
 
-/*
-.descripcion {
-    margin-left: map-get($medidas, medium);
-    justify-content: center;
-}
-*/
+
+
 header {
     border-bottom: 8px;
     border-color: $color-secundario;
 }
 
-
+/*ubicacion*/
+.horarios {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
 /*Contacto*/
 
@@ -600,19 +621,88 @@ header {
 
 @media screen and (max-width:360px) {
 
+    /*genreal*/
+
+    .animate__animated {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        #logo {
+            @include sizes (100px, 100px);
+            margin-left: 35px;
+            padding: 5px;
+            border: 5px;
+            margin-right: 35px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+
     /*formulario*/
     form {
         width: 100%;
     }
 
-    h2 {
-        .soluciones {
+    .titulocontacto {
+        font-size: 35px;
+    }
+
+
+    /*index imagenes soluciones*/
+    .cajablanca {
+        h2 {
             justify-content: center;
-            text-decoration: underline;
+            align-items: center;
+            text-align: center;
+
+            .soluciones {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+
+        }
+
+        li {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            #industria {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        ul {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            .solu {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
         }
     }
 
-    /*index*/
+
+
+    /*index carrusel*/
 
     .indeximg1 {
         width: 320px;
@@ -713,7 +803,7 @@ header {
 
     /*cartillas nosotros*/
     .primerContenido {
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
         padding-bottom: 20px;
@@ -727,6 +817,12 @@ header {
             width: 300px;
             height: 390px;
             border-radius: 10px;
+
+            .contenidobox {
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
 
 
             .imagenpresentacion {
@@ -756,9 +852,60 @@ header {
         }
     }
 
+    /*Servicios*/
+
+    .servicios {
+        margin-top: map-get($medidas, small);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .derecho-de {
+        font-size: 25px;
+        text-decoration: underline;
+    }
+
+    /*Quienes somos*/
+
+    h2 {
+        margin-top: map-get($medidas, small);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        .quienes-somos {
+            margin-top: map-get($medidas, small);
+        }
+    }
+
 }
 
 @media screen and (min-width:361px) {
+
+    /*genreal*/
+
+    .animate__animated {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        #logo {
+            @include sizes (100px, 100px);
+            margin-left: 35px;
+            padding: 5px;
+            border: 5px;
+            margin-right: 35px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
 
     /*carrusel*/
 
@@ -901,6 +1048,55 @@ header {
                 padding: 10px;
             }
 
+        }
+    }
+
+
+    /*index soluciones*/
+
+    .cajablanca {
+        h2 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .soluciones {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+
+        }
+
+        li {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            #industria {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        ul {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            .solu {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
         }
     }
 
@@ -1172,6 +1368,7 @@ header {
         }
     }
 
+
 }
 
 @media screen and (min-width:1200px) {
@@ -1208,7 +1405,44 @@ header {
             "footerContacto footerContacto footerContacto";
     }
 
+    /*Contenedor quienes somos*/
 
+    .contenedorQuienesSomos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0, 25fr 1fr 1fr 0, 25fr;
+        gap: 0;
+        grid-template-areas: "Nos Nos Nos"
+            "intro intro intro"
+            "caja1 caja2 caja3 "
+            "footerNosotros footerNosotros footerNosotros";
+    }
+
+
+    .Nos {
+        grid-area: Nos;
+    }
+
+
+    #intro {
+        grid-area: intro;
+    }
+
+    .caja1 {
+        grid-area: caja1;
+    }
+
+    .caja2 {
+        grid-area: caja2;
+    }
+
+    .caja3 {
+        grid-area: caja3;
+    }
+
+    .footerNosotros {
+        grid-area: footerNosotros;
+    }
 
 
     header {
@@ -1224,28 +1458,27 @@ header {
         border-color: $color-secundario;
 
 
+        /*genreal*/
 
+        .animate__animated {
+            text-align: left;
+            justify-content: center;
+            align-items: left;
 
-        .logo {
-            @include sizes (150px, 150px);
-            margin-left: map-get($medidas, small);
-            margin-right: map-get($medidas, medium);
-            ;
-            padding: 5px;
-            border: 5px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #logo {
-            @include sizes (130px, 130px);
+            #logo {
+                @include sizes (130px, 130px);
+                margin-left: map-get($medidas, small);
+                margin-right: map-get($medidas, medium);
+                padding: 5px;
+                border: 5px;
+                align-items: center;
+                justify-content: space-between;
+            }
 
         }
 
         .titulo {
-            margin-right: 25px;
             font-size: 70px;
-
         }
 
     }
@@ -1408,6 +1641,9 @@ header {
             background-color: white;
             position: relative;
             display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
             width: 370px;
             height: 470px;
             border-radius: 10px;
@@ -1440,13 +1676,11 @@ header {
         }
     }
 
-
 }
 
+/*carrusel de servicios*/
 
-/*carrusel (cambiar medidas a formato mobile)*/
-
-#kiko-slider {
+#den-slider {
     margin: auto;
     max-width: 900px;
     min-width: 300px;
@@ -1456,14 +1690,14 @@ header {
 
 }
 
-#kiko-slider>ul,
+#den-slider>ul,
 li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-#kiko-slider>ul.slider {
+#den-slider>ul.slider {
     position: relative;
     max-width: 900px;
     min-width: 300px;
@@ -1473,7 +1707,7 @@ li {
 }
 
 
-#kiko-slider>ul.slider h1 {
+#den-slider>ul.slider h1 {
     position: absolute;
     padding: 10px;
     left: 50%;
@@ -1481,7 +1715,7 @@ li {
     transform: translate(-50%, -50%);
 }
 
-#kiko-slider>ul.slider li {
+#den-slider>ul.slider li {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -1492,29 +1726,29 @@ li {
 
 }
 
-#kiko-slider>ul.slider li img {
+#den-slider>ul.slider li img {
     width: 100%;
     height: 300px;
     object-fit: cover;
 
 }
 
-#kiko-slider>ul.slider li:first-child {
+#den-slider>ul.slider li:first-child {
     opacity: 1;
     /*Mostramos el primer <li>*/
 }
 
-#kiko-slider>ul.slider li:target {
+#den-slider>ul.slider li:target {
     opacity: 1;
     /*Mostramos el <li> del enlace que pulsemos*/
 }
 
-#kiko-slider>.menu {
+#den-slider>.menu {
     text-align: center;
     margin: 20px;
 }
 
-#kiko-slider>.menu li a {
+#den-slider>.menu li a {
     display: inline-block;
     color: black;
     text-decoration: none;
@@ -1579,11 +1813,4 @@ li {
         display: inline-flex;
         justify-content: space-between;
     }
-}
-
-/*ubicacion*/
-.horarios{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
 }

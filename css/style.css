@@ -42,6 +42,20 @@ $colores: (color-principal:#320A28, color-secundario:#b9aeb6, color-texto:white,
   font-family: RobotoSlab-extrabold;
   font-weight: bold; }
 
+.fa-brands {
+  font-size: 30px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center; }
+
+.fa-solid {
+  font-size: 30px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center; }
+
 body {
   margin-top: 0;
   margin-right: 0;
@@ -73,17 +87,12 @@ body {
       margin-top: 5px;
       margin-bottom: 5px;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      text-align: center; }
 
 .nav-link {
   color: white; }
 
-/* .menu{
-display:flex;
-padding: 20px;
-text decoration: none;
-margin-right: inherit;
-} */
 ul.menu li {
   display: inline-flex;
   padding-right: 40px;
@@ -136,7 +145,8 @@ footer {
   margin-right: 100px;
   font-size: 20px;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  justify-content: center; }
   .parrafos-index #parrafosIndex {
     text-align: center;
     margin: 20px;
@@ -144,6 +154,8 @@ footer {
 
 #parrafosIndex {
   text-align: justify;
+  text-align: center;
+  justify-content: center;
   margin: 20px;
   padding: 10px; }
 
@@ -164,19 +176,6 @@ footer {
   margin: 0px;
   text-decoration: none; }
 
-/*Ubicacion*/
-/*
-.mapa {
-    @include mp (5px, 5px);
-    border: 5px;
-    justify-content: center;
-
-    #mapaUbicacion {
-        @include sizes (400px, 260px);
-
-    }
-}
-*/
 /*texto*/
 p {
   font-size: 20px; }
@@ -195,16 +194,23 @@ h2 {
 
 /*Servicios*/
 .servicios {
-  margin-left: 30px;
   margin-top: 20px;
   justify-content: center;
-  font-size: 30px; }
+  text-align: center;
+  align-items: center;
+  font-size: 40px; }
 
 .derecho-de {
-  margin-left: 0px; }
+  font-size: 35px;
+  text-decoration: underline; }
 
-.items {
-  margin-left: 30px; }
+ul {
+  padding-right: 10px !important;
+  padding-left: 10px !important; }
+  ul .items {
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
 
 .carousel-item {
   margin-right: 30px;
@@ -214,19 +220,24 @@ h2 {
   align-items: center; }
 
 /*Quienes somos*/
-.quienes-somos {
-  margin-left: 30px;
-  margin-top: 20px; }
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+  h2 .quienes-somos {
+    margin-top: 20px; }
 
-/*
-.descripcion {
-    margin-left: map-get($medidas, medium);
-    justify-content: center;
-}
-*/
 header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
   border-bottom: 8px;
   border-color: #b9aeb6; }
+
+/*ubicacion*/
+.horarios {
+  justify-content: center;
+  text-align: center;
+  align-items: center; }
 
 /*Contacto*/
 input,
@@ -431,13 +442,60 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
 
 /*media querie*/
 @media screen and (max-width: 360px) {
+  /*genreal*/
+  .animate__animated {
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+    .animate__animated #logo {
+      height: 100px;
+      width: 100px;
+      margin-left: 35px;
+      padding: 5px;
+      border: 5px;
+      margin-right: 35px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
   /*formulario*/
   form {
     width: 100%; }
-  h2 .soluciones {
+  .titulocontacto {
+    font-size: 35px; }
+  /*index imagenes soluciones*/
+  .cajablanca h2 {
     justify-content: center;
-    text-decoration: underline; }
-  /*index*/
+    align-items: center;
+    text-align: center; }
+    .cajablanca h2 .soluciones {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-decoration: underline; }
+  .cajablanca li {
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .cajablanca li #industria {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0; }
+  .cajablanca ul {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .cajablanca ul .solu {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center; }
+  /*index carrusel*/
   .indeximg1 {
     width: 320px;
     height: 180px; }
@@ -498,7 +556,7 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       width: 270px; }
   /*cartillas nosotros*/
   .primerContenido {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     padding-bottom: 20px; }
@@ -510,6 +568,10 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       width: 300px;
       height: 390px;
       border-radius: 10px; }
+      .primerContenido .box .contenidobox {
+        justify-content: space-between;
+        align-items: center;
+        text-align: center; }
       .primerContenido .box .imagenpresentacion {
         justify-content: center;
         align-items: center;
@@ -527,9 +589,45 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
         justify-content: center;
         text-align: center;
         margin: 5px;
-        padding: 10px; } }
+        padding: 10px; }
+  /*Servicios*/
+  .servicios {
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 30px; }
+  .derecho-de {
+    font-size: 25px;
+    text-decoration: underline; }
+  /*Quienes somos*/
+  h2 {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px; }
+    h2 .quienes-somos {
+      margin-top: 20px; } }
 
 @media screen and (min-width: 361px) {
+  /*genreal*/
+  .animate__animated {
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+    .animate__animated #logo {
+      height: 100px;
+      width: 100px;
+      margin-left: 35px;
+      padding: 5px;
+      border: 5px;
+      margin-right: 35px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
   /*carrusel*/
   .indeximg1 {
     width: 380px;
@@ -620,7 +718,38 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
         justify-content: center;
         text-align: center;
         margin: 5px;
-        padding: 10px; } }
+        padding: 10px; }
+  /*index soluciones*/
+  .cajablanca h2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .cajablanca h2 .soluciones {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-decoration: underline; }
+  .cajablanca li {
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .cajablanca li #industria {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0; }
+  .cajablanca ul {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .cajablanca ul .solu {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center; } }
 
 @media screen and (min-width: 768px) {
   .contenedorIndex {
@@ -808,6 +937,25 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     grid-template-rows: 0, 25fr 1fr 0, 25fr;
     gap: 0;
     grid-template-areas: "headerContacto headerContacto headerContacto" "formulario formulario formulario" "footerContacto footerContacto footerContacto"; }
+  /*Contenedor quienes somos*/
+  .contenedorQuienesSomos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0, 25fr 1fr 1fr 0, 25fr;
+    gap: 0;
+    grid-template-areas: "Nos Nos Nos" "intro intro intro" "caja1 caja2 caja3 " "footerNosotros footerNosotros footerNosotros"; }
+  .Nos {
+    grid-area: Nos; }
+  #intro {
+    grid-area: intro; }
+  .caja1 {
+    grid-area: caja1; }
+  .caja2 {
+    grid-area: caja2; }
+  .caja3 {
+    grid-area: caja3; }
+  .footerNosotros {
+    grid-area: footerNosotros; }
   header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .headerServicios {
     background-color: #320A28;
     display: inline-flex;
@@ -818,21 +966,22 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
     border-right: 0;
     border-left: 0;
     border-style: solid;
-    border-color: #b9aeb6; }
-    header .logo, .headerIndex .logo, .headerUbicacion .logo, .headerContacto .logo, .headerNosotros .logo, .headerServicios .logo {
-      height: 150px;
-      width: 150px;
-      margin-left: 20px;
-      margin-right: 30px;
-      padding: 5px;
-      border: 5px;
-      align-items: center;
-      justify-content: space-between; }
-    header #logo, .headerIndex #logo, .headerUbicacion #logo, .headerContacto #logo, .headerNosotros #logo, .headerServicios #logo {
-      height: 130px;
-      width: 130px; }
+    border-color: #b9aeb6;
+    /*genreal*/ }
+    header .animate__animated, .headerIndex .animate__animated, .headerUbicacion .animate__animated, .headerContacto .animate__animated, .headerNosotros .animate__animated, .headerServicios .animate__animated {
+      text-align: left;
+      justify-content: center;
+      align-items: left; }
+      header .animate__animated #logo, .headerIndex .animate__animated #logo, .headerUbicacion .animate__animated #logo, .headerContacto .animate__animated #logo, .headerNosotros .animate__animated #logo, .headerServicios .animate__animated #logo {
+        height: 130px;
+        width: 130px;
+        margin-left: 20px;
+        margin-right: 30px;
+        padding: 5px;
+        border: 5px;
+        align-items: center;
+        justify-content: space-between; }
     header .titulo, .headerIndex .titulo, .headerUbicacion .titulo, .headerContacto .titulo, .headerNosotros .titulo, .headerServicios .titulo {
-      margin-right: 25px;
       font-size: 70px; }
   .mapa {
     margin: 5px;
@@ -932,6 +1081,9 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
       background-color: white;
       position: relative;
       display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
       width: 370px;
       height: 470px;
       border-radius: 10px; }
@@ -954,8 +1106,8 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
         margin: 5px;
         padding: 10px; } }
 
-/*carrusel (cambiar medidas a formato mobile)*/
-#kiko-slider {
+/*carrusel de servicios*/
+#den-slider {
   margin: auto;
   max-width: 900px;
   min-width: 300px;
@@ -963,27 +1115,27 @@ header, .headerIndex, .headerUbicacion, .headerContacto, .headerNosotros, .heade
   padding: 30px;
   box-sizing: border-box; }
 
-#kiko-slider > ul,
+#den-slider > ul,
 li {
   padding: 0;
   margin: 0;
   list-style: none; }
 
-#kiko-slider > ul.slider {
+#den-slider > ul.slider {
   position: relative;
   max-width: 900px;
   min-width: 300px;
   width: 100%;
   height: 300px; }
 
-#kiko-slider > ul.slider h1 {
+#den-slider > ul.slider h1 {
   position: absolute;
   padding: 10px;
   left: 50%;
   top: 100px;
   transform: translate(-50%, -50%); }
 
-#kiko-slider > ul.slider li {
+#den-slider > ul.slider li {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -992,24 +1144,24 @@ li {
   height: inherit;
   transition: opacity .5s; }
 
-#kiko-slider > ul.slider li img {
+#den-slider > ul.slider li img {
   width: 100%;
   height: 300px;
   object-fit: cover; }
 
-#kiko-slider > ul.slider li:first-child {
+#den-slider > ul.slider li:first-child {
   opacity: 1;
   /*Mostramos el primer <li>*/ }
 
-#kiko-slider > ul.slider li:target {
+#den-slider > ul.slider li:target {
   opacity: 1;
   /*Mostramos el <li> del enlace que pulsemos*/ }
 
-#kiko-slider > .menu {
+#den-slider > .menu {
   text-align: center;
   margin: 20px; }
 
-#kiko-slider > .menu li a {
+#den-slider > .menu li a {
   display: inline-block;
   color: black;
   text-decoration: none;
@@ -1062,9 +1214,3 @@ li {
   .soluciones .solu {
     display: inline-flex;
     justify-content: space-between; }
-
-/*ubicacion*/
-.horarios {
-  justify-content: center;
-  text-align: center;
-  align-items: center; }
